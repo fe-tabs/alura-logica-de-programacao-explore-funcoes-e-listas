@@ -1,11 +1,12 @@
 alert("Boas vindas ao Jogo do Número Secreto!");
 
+let maxNumber = 100;
 let guess;
 let guesses = 1;
-let secretNumber = 9;
+let secretNumber = parseInt(Math.random() * maxNumber) + 1;
 
 while (guess != secretNumber) {
-  guess = prompt("Escolha um número entre 1 e 10: ");
+  guess = prompt(`Escolha um número entre 1 e ${maxNumber}: `);
 
   if (guess == secretNumber) {
     break;
